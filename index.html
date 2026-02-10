@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MRD Tech Shop | Premium Laptops & Accessories</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            900: '#0c4a6e',
+                        },
+                        dark: {
+                            bg: '#0f172a',
+                            card: '#1e293b',
+                            text: '#f1f5f9'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .glass-nav {
+            background: rgba(15, 23, 42, 0.9);
+            backdrop-filter: blur(10px);
+        }
+        .hero-gradient {
+            background: linear-gradient(to right, rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.7)), url('https://images.unsplash.com/photo-1517336714731-489689fd1ca4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
+</head>
+<body class="bg-dark-bg text-dark-text">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-nav border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex-shrink-0 flex items-center gap-2">
+                    <i class="fas fa-laptop-code text-brand-500 text-3xl"></i>
+                    <span class="font-bold text-2xl tracking-tighter text-white">MRD<span class="text-brand-500">Tech</span></span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="index.html" class="text-brand-500 px-3 py-2 rounded-md text-sm font-medium transition duration-300">Home</a>
+                        <a href="shop.html" class="text-gray-300 hover:text-brand-500 transition duration-300 px-3 py-2 rounded-md text-sm font-medium">Laptops</a>
+                        <a href="about.html" class="text-gray-300 hover:text-brand-500 transition duration-300 px-3 py-2 rounded-md text-sm font-medium">About Us</a>
+                        <a href="contact.html" class="bg-brand-600 hover:bg-brand-500 text-white px-5 py-2 rounded-full text-sm font-medium transition duration-300 transform hover:scale-105">Contact Us</a>
+                    </div>
+                </div>
+                <div class="-mr-2 flex md:hidden">
+                    <button type="button" class="bg-gray-800 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none" aria-controls="mobile-menu" aria-expanded="false" id="mobile-menu-btn">
+                        <span class="sr-only">Open main menu</span>
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div class="hidden md:hidden bg-gray-900 border-t border-gray-800" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="text-white block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                <a href="shop.html" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Laptops</a>
+                <a href="about.html" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">About Us</a>
+                <a href="contact.html" class="text-brand-500 block px-3 py-2 rounded-md text-base font-medium">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="relative pt-20 pb-16 md:pt-32 md:pb-24 hero-gradient min-h-screen flex items-center">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+            <div class="lg:grid lg:grid-cols-12 lg:gap-8 items-center">
+                <div class="sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left">
+                    <h1 class="text-4xl tracking-tight font-extrabold text-white sm:text-5xl md:text-6xl lg:text-6xl">
+                        <span class="block text-gray-200">Upgrade Your</span>
+                        <span class="block text-brand-500 mt-2">Digital Life</span>
+                    </h1>
+                    <p class="mt-3 text-base text-gray-300 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
+                        Discover the latest high-performance laptops at MRD Tech Shop. From gaming beasts to sleek ultrabooks, we have everything you need to dominate the digital world.
+                    </p>
+                    <div class="mt-8 sm:max-w-lg sm:mx-auto sm:text-center lg:text-left lg:mx-0 flex flex-col sm:flex-row gap-4">
+                        <a href="shop.html" class="w-full sm:w-auto flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-full text-white bg-brand-600 hover:bg-brand-700 md:py-4 md:text-lg md:px-10 transition transform hover:-translate-y-1 shadow-lg shadow-brand-500/30">
+                            Shop Now
+                        </a>
+                        <a href="contact.html" class="w-full sm:w-auto flex items-center justify-center px-8 py-3 border border-gray-500 text-base font-medium rounded-full text-gray-300 hover:bg-gray-800 md:py-4 md:text-lg md:px-10 transition">
+                            Visit Store
+                        </a>
+                    </div>
+                    <div class="mt-8 flex items-center gap-4 text-gray-400 text-sm sm:justify-center lg:justify-start">
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-check-circle text-brand-500"></i> Local Warranty
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-check-circle text-brand-500"></i> Best Price Guarantee
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-12 relative sm:max-w-lg sm:mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-6 lg:flex lg:items-center">
+                    <div class="relative mx-auto w-full rounded-lg shadow-lg lg:max-w-md animate-float">
+                        <img class="w-full rounded-2xl shadow-2xl ring-1 ring-white/10" src="https://images.unsplash.com/photo-1593640408182-31c70c8268f5?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="High End Laptop">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <div class="py-16 bg-dark-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h2 class="text-brand-500 text-lg font-semibold tracking-wide uppercase">Why Choose Us</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-white sm:text-4xl">
+                    Premium Quality, Unmatched Service
+                </p>
+            </div>
+            <div class="mt-10">
+                <div class="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
+                    <!-- Feature 1 -->
+                    <div class="bg-dark-card p-6 rounded-2xl border border-gray-800 hover:border-brand-500/50 transition duration-300">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-brand-500 text-white mb-4">
+                            <i class="fas fa-shipping-fast text-xl"></i>
+                        </div>
+                        <h3 class="text-lg leading-6 font-medium text-white">Island-wide Delivery</h3>
+                        <p class="mt-2 text-base text-gray-400">
+                            We deliver your favorite tech right to your doorstep, anywhere in Sri Lanka, safely and quickly.
+                        </p>
+                    </div>
+                    <!-- Feature 2 -->
+                    <div class="bg-dark-card p-6 rounded-2xl border border-gray-800 hover:border-brand-500/50 transition duration-300">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-brand-500 text-white mb-4">
+                            <i class="fas fa-shield-alt text-xl"></i>
+                        </div>
+                        <h3 class="text-lg leading-6 font-medium text-white">Genuine Warranty</h3>
+                        <p class="mt-2 text-base text-gray-400">
+                            All our products come with official manufacturer warranty. Peace of mind guaranteed.
+                        </p>
+                    </div>
+                    <!-- Feature 3 -->
+                    <div class="bg-dark-card p-6 rounded-2xl border border-gray-800 hover:border-brand-500/50 transition duration-300">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-brand-500 text-white mb-4">
+                            <i class="fas fa-headset text-xl"></i>
+                        </div>
+                        <h3 class="text-lg leading-6 font-medium text-white">Expert Support</h3>
+                        <p class="mt-2 text-base text-gray-400">
+                            Our team of experts is always ready to help you choose the best laptop for your needs.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Featured Products -->
+    <div class="py-16 bg-gray-900/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-extrabold text-white mb-8">Featured Laptops</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Product Card 1 -->
+                <div class="group bg-dark-card rounded-2xl overflow-hidden border border-gray-800 hover:border-brand-500 transition duration-300 shadow-lg">
+                    <div class="relative overflow-hidden h-64">
+                         <img src="https://images.unsplash.com/photo-1603302576837-37561b2e2302?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Laptop" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                         <div class="absolute top-4 right-4 bg-brand-600 text-white text-xs font-bold px-3 py-1 rounded-full">NEW</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2">ROG Zephyrus G14</h3>
+                        <p class="text-gray-400 text-sm mb-4">Ryzen 9 · RTX 4060 · 16GB RAM · 1TB SSD</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl font-bold text-brand-500">LKR 450,000</span>
+                            <button class="text-white bg-gray-700 hover:bg-brand-600 rounded-full p-3 transition duration-300">
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                 <!-- Product Card 2 -->
+                 <div class="group bg-dark-card rounded-2xl overflow-hidden border border-gray-800 hover:border-brand-500 transition duration-300 shadow-lg">
+                    <div class="relative overflow-hidden h-64">
+                         <img src="https://images.unsplash.com/photo-1544731612-de7f96afe55f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Laptop" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2">MacBook Air M2</h3>
+                        <p class="text-gray-400 text-sm mb-4">M2 Chip · 8GB RAM · 256GB SSD</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl font-bold text-brand-500">LKR 385,000</span>
+                            <button class="text-white bg-gray-700 hover:bg-brand-600 rounded-full p-3 transition duration-300">
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                 <!-- Product Card 3 -->
+                 <div class="group bg-dark-card rounded-2xl overflow-hidden border border-gray-800 hover:border-brand-500 transition duration-300 shadow-lg">
+                    <div class="relative overflow-hidden h-64">
+                         <img src="https://images.unsplash.com/photo-1588872657578-a3d2e184594c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Laptop" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                         <div class="absolute top-4 right-4 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full">SALE</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2">Dell XPS 13</h3>
+                        <p class="text-gray-400 text-sm mb-4">i7 12th Gen · 16GB RAM · 512GB SSD</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl font-bold text-brand-500">LKR 410,000</span>
+                            <button class="text-white bg-gray-700 hover:bg-brand-600 rounded-full p-3 transition duration-300">
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-12 text-center">
+                <a href="shop.html" class="inline-flex items-center justify-center px-8 py-3 border border-brand-500 text-base font-medium rounded-full text-brand-500 hover:bg-brand-500 hover:text-white transition duration-300">
+                    View All Products
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Call to Action -->
+    <div class="relative bg-brand-900 py-16">
+        <div class="absolute inset-0 overflow-hidden">
+            <img class="w-full h-full object-cover opacity-20" src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80" alt="Tech Background">
+        </div>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-extrabold text-white sm:text-4xl">
+                Need Help Choosing?
+            </h2>
+            <p class="mt-4 text-xl text-gray-300">
+                Contact our team for personalized recommendations based on your needs and budget.
+            </p>
+            <div class="mt-8 flex justify-center">
+                <div class="inline-flex rounded-md shadow">
+                    <a href="contact.html" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-brand-600 bg-white hover:bg-gray-50">
+                        Contact Us Now
+                    </a>
+                </div>
+                <div class="ml-3 inline-flex">
+                    <a href="tel:+94771234567" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-brand-700 bg-opacity-60 hover:bg-opacity-70 backdrop-filter backdrop-blur-sm">
+                        <i class="fas fa-phone-alt mr-2"></i> Call Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark-bg border-t border-gray-800 pt-12 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center gap-2 mb-4">
+                        <i class="fas fa-laptop-code text-brand-500 text-2xl"></i>
+                        <span class="font-bold text-xl text-white">MRD<span class="text-brand-500">Tech</span></span>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed max-w-xs">
+                        Your one-stop shop for premium laptops and accessories in Sri Lanka. We bring the latest technology to your fingertips.
+                    </p>
+                    <div class="mt-4 flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-brand-500"><i class="fab fa-facebook-f text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-brand-500"><i class="fab fa-instagram text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-brand-500"><i class="fab fa-twitter text-xl"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-white font-semibold mb-4 uppercase tracking-wider text-sm">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-brand-500 text-sm">Home</a></li>
+                        <li><a href="shop.html" class="text-gray-400 hover:text-brand-500 text-sm">Laptops</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-brand-500 text-sm">About Us</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-brand-500 text-sm">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white font-semibold mb-4 uppercase tracking-wider text-sm">Contact Info</h3>
+                    <ul class="space-y-2">
+                        <li class="text-gray-400 text-sm"><i class="fas fa-map-marker-alt mr-2 text-brand-500"></i> Colombo, Sri Lanka</li>
+                        <li class="text-gray-400 text-sm"><i class="fas fa-phone mr-2 text-brand-500"></i> +94 77 123 4567</li>
+                        <li class="text-gray-400 text-sm"><i class="fas fa-envelope mr-2 text-brand-500"></i> sales@mrdtech.lk</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center">
+                <p class="text-gray-500 text-sm">&copy; 2024 MRD Tech Shop. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

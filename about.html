@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | MRD Tech Shop</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            900: '#0c4a6e',
+                        },
+                        dark: {
+                            bg: '#0f172a',
+                            card: '#1e293b',
+                            text: '#f1f5f9'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .glass-nav {
+            background: rgba(15, 23, 42, 0.9);
+            backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+
+<body class="bg-dark-bg text-dark-text flex flex-col min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-nav border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex-shrink-0 flex items-center gap-2">
+                    <a href="index.html" class="flex items-center gap-2">
+                        <i class="fas fa-laptop-code text-brand-500 text-3xl"></i>
+                        <span class="font-bold text-2xl tracking-tighter text-white">MRD<span
+                                class="text-brand-500">Tech</span></span>
+                    </a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="index.html"
+                            class="text-gray-300 hover:text-brand-500 transition duration-300 px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                        <a href="shop.html"
+                            class="text-gray-300 hover:text-brand-500 transition duration-300 px-3 py-2 rounded-md text-sm font-medium">Laptops</a>
+                        <a href="about.html" class="text-brand-500 px-3 py-2 rounded-md text-sm font-medium">About
+                            Us</a>
+                        <a href="contact.html"
+                            class="bg-brand-600 hover:bg-brand-500 text-white px-5 py-2 rounded-full text-sm font-medium transition duration-300 transform hover:scale-105">Contact
+                            Us</a>
+                    </div>
+                </div>
+                <div class="-mr-2 flex md:hidden">
+                    <button type="button"
+                        class="bg-gray-800 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none"
+                        id="mobile-menu-btn">
+                        <span class="sr-only">Open main menu</span>
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div class="hidden md:hidden bg-gray-900 border-t border-gray-800" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html"
+                    class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                <a href="shop.html"
+                    class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Laptops</a>
+                <a href="about.html" class="text-brand-500 block px-3 py-2 rounded-md text-base font-medium">About
+                    Us</a>
+                <a href="contact.html"
+                    class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Contact
+                    Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <div class="relative py-24 bg-gray-900 overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-full opacity-10">
+            <img src="https://images.unsplash.com/photo-1531297420494-856f4af421a3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80"
+                class="w-full h-full object-cover">
+        </div>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
+            <h1 class="text-4xl font-extrabold text-white sm:text-5xl sm:tracking-tight lg:text-6xl">About MRD Tech</h1>
+            <p class="mt-5 max-w-xl mx-auto text-xl text-gray-400">Powering Sri Lanka's digital future, one laptop at a
+                time.</p>
+        </div>
+    </div>
+
+    <!-- Content -->
+    <div class="py-16 bg-dark-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:grid lg:grid-cols-2 lg:gap-24 items-center">
+                <div>
+                    <h2 class="text-3xl font-extrabold text-white tracking-tight sm:text-4xl">Our Story</h2>
+                    <p class="mt-4 text-lg text-gray-300">
+                        MRD Tech Shop started with a simple vision: to provide high-quality, reliable laptops to
+                        professionals, gamers, and students in Sri Lanka at fair prices.
+                    </p>
+                    <p class="mt-4 text-lg text-gray-300">
+                        What began as a small passion project has grown into a trusted destination for tech enthusiasts.
+                        We don't just sell laptops; we understand them. Every device we stock is handpicked for
+                        performance and value.
+                    </p>
+
+                    <div class="mt-10 grid grid-cols-2 gap-x-8 gap-y-8">
+                        <div>
+                            <div class="flex items-center justify-center h-12 w-12 rounded-md bg-brand-500 text-white">
+                                <i class="fas fa-users text-xl"></i>
+                            </div>
+                            <h3 class="mt-4 text-lg font-medium text-white">Customer First</h3>
+                            <p class="mt-2 text-base text-gray-400">We prioritize your needs over sales targets.</p>
+                        </div>
+                        <div>
+                            <div class="flex items-center justify-center h-12 w-12 rounded-md bg-brand-500 text-white">
+                                <i class="fas fa-award text-xl"></i>
+                            </div>
+                            <h3 class="mt-4 text-lg font-medium text-white">Quality Assured</h3>
+                            <p class="mt-2 text-base text-gray-400">Only 100% genuine products with warranty.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-12 lg:mt-0">
+                    <div class="relative rounded-2xl overflow-hidden shadow-2xl border border-gray-800">
+                        <img class="w-full object-cover"
+                            src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
+                            alt="Team meeting">
+                        <div class="absolute inset-0 bg-brand-900mix-blend-multiply opacity-20"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

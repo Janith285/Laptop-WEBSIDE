@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | MRD Tech Shop</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            900: '#0c4a6e',
+                        },
+                        dark: {
+                            bg: '#0f172a',
+                            card: '#1e293b',
+                            text: '#f1f5f9'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .glass-nav {
+            background: rgba(15, 23, 42, 0.9);
+            backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+
+<body class="bg-dark-bg text-dark-text flex flex-col min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-nav border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex-shrink-0 flex items-center gap-2">
+                    <a href="index.html" class="flex items-center gap-2">
+                        <i class="fas fa-laptop-code text-brand-500 text-3xl"></i>
+                        <span class="font-bold text-2xl tracking-tighter text-white">MRD<span
+                                class="text-brand-500">Tech</span></span>
+                    </a>
+                </div>
+                <!-- Desktop Menu -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="index.html"
+                            class="text-gray-300 hover:text-brand-500 transition duration-300 px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                        <a href="shop.html"
+                            class="text-gray-300 hover:text-brand-500 transition duration-300 px-3 py-2 rounded-md text-sm font-medium">Laptops</a>
+                        <a href="about.html"
+                            class="text-gray-300 hover:text-brand-500 transition duration-300 px-3 py-2 rounded-md text-sm font-medium">About
+                            Us</a>
+                        <a href="contact.html"
+                            class="bg-brand-600 hover:bg-brand-500 text-white px-5 py-2 rounded-full text-sm font-medium transition duration-300 transform hover:scale-105">Contact
+                            Us</a>
+                    </div>
+                </div>
+                <!-- Mobile Menu Button -->
+                <div class="-mr-2 flex md:hidden">
+                    <button type="button"
+                        class="bg-gray-800 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none"
+                        id="mobile-menu-btn">
+                        <span class="sr-only">Open main menu</span>
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div class="hidden md:hidden bg-gray-900 border-t border-gray-800" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html"
+                    class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                <a href="shop.html"
+                    class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Laptops</a>
+                <a href="about.html"
+                    class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">About Us</a>
+                <a href="contact.html" class="text-brand-500 block px-3 py-2 rounded-md text-base font-medium">Contact
+                    Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <div class="bg-gray-800 py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl font-extrabold text-white">Get in Touch</h1>
+            <p class="mt-4 text-gray-400 text-lg">We'd love to hear from you. Visit our store or drop us a message.</p>
+        </div>
+    </div>
+
+    <!-- Contact Content -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <!-- Form -->
+            <div class="bg-dark-card p-8 rounded-2xl border border-gray-800 shadow-xl">
+                <h2 class="text-2xl font-bold text-white mb-6">Send us a Message</h2>
+                <form class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-400">Your Name</label>
+                        <input type="text" id="name"
+                            class="mt-1 block w-full bg-gray-900 border border-gray-700 rounded-md shadow-sm py-3 px-4 text-white placeholder-gray-500 focus:ring-brand-500 focus:border-brand-500 transition"
+                            placeholder="John Doe">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-400">Email Address</label>
+                        <input type="email" id="email"
+                            class="mt-1 block w-full bg-gray-900 border border-gray-700 rounded-md shadow-sm py-3 px-4 text-white placeholder-gray-500 focus:ring-brand-500 focus:border-brand-500 transition"
+                            placeholder="john@example.com">
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-400">Message</label>
+                        <textarea id="message" rows="4"
+                            class="mt-1 block w-full bg-gray-900 border border-gray-700 rounded-md shadow-sm py-3 px-4 text-white placeholder-gray-500 focus:ring-brand-500 focus:border-brand-500 transition"
+                            placeholder="I'm interested in..."></textarea>
+                    </div>
+                    <button type="submit"
+                        class="w-full bg-brand-600 hover:bg-brand-700 text-white font-bold py-3 px-4 rounded-md transition duration-300 shadow-lg shadow-brand-500/30">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+
+            <!-- Info & Map -->
+            <div class="space-y-8">
+                <!-- Info Cards -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div class="bg-dark-card p-6 rounded-xl border border-gray-800 flex items-start space-x-4">
+                        <div class="flex-shrink-0 bg-brand-500/10 p-3 rounded-lg">
+                            <i class="fas fa-phone-alt text-brand-500 text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-medium text-white">Phone</h3>
+                            <p class="mt-1 text-gray-400">+94 77 123 4567</p>
+                            <p class="text-gray-400">+94 11 234 5678</p>
+                        </div>
+                    </div>
+                    <div class="bg-dark-card p-6 rounded-xl border border-gray-800 flex items-start space-x-4">
+                        <div class="flex-shrink-0 bg-brand-500/10 p-3 rounded-lg">
+                            <i class="fas fa-envelope text-brand-500 text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-medium text-white">Email</h3>
+                            <p class="mt-1 text-gray-400">sales@mrdtech.lk</p>
+                            <p class="text-gray-400">support@mrdtech.lk</p>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-dark-card p-6 rounded-xl border border-gray-800 flex items-start space-x-4 sm:col-span-2">
+                        <div class="flex-shrink-0 bg-brand-500/10 p-3 rounded-lg">
+                            <i class="fas fa-map-marker-alt text-brand-500 text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-medium text-white">Location</h3>
+                            <p class="mt-1 text-gray-400">123, Tech Street, Colombo 03, Sri Lanka.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Map Placeholder -->
+                <div
+                    class="w-full h-64 rounded-2xl overflow-hidden border border-gray-800 shadow-lg relative bg-gray-800 flex items-center justify-center group">
+                    <!-- Since we can't embed a real interactive map key here easily, we use a static image representation -->
+                    <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
+                        class="w-full h-full object-cover opacity-50 group-hover:opacity-75 transition duration-500">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <a href="https://maps.google.com" target="_blank"
+                            class="bg-brand-600/90 text-white px-6 py-2 rounded-full backdrop-blur-sm hover:bg-brand-500 transition transform hover:scale-105 shadow-xl">
+                            <i class="fas fa-location-arrow mr-2"></i> Open in Maps
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

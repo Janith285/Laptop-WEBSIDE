@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products | MRD Tech Shop</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            900: '#0c4a6e',
+                        },
+                        dark: {
+                            bg: '#0f172a',
+                            card: '#1e293b',
+                            text: '#f1f5f9'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .glass-nav {
+            background: rgba(15, 23, 42, 0.9);
+            backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+
+<body class="bg-dark-bg text-dark-text flex flex-col min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-nav border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex-shrink-0 flex items-center gap-2">
+                    <a href="index.html" class="flex items-center gap-2">
+                        <i class="fas fa-laptop-code text-brand-500 text-3xl"></i>
+                        <span class="font-bold text-2xl tracking-tighter text-white">MRD<span
+                                class="text-brand-500">Tech</span></span>
+                    </a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="index.html"
+                            class="text-gray-300 hover:text-brand-500 transition duration-300 px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                        <a href="shop.html" class="text-brand-500 px-3 py-2 rounded-md text-sm font-medium">Laptops</a>
+                        <a href="about.html"
+                            class="text-gray-300 hover:text-brand-500 transition duration-300 px-3 py-2 rounded-md text-sm font-medium">About
+                            Us</a>
+                        <a href="contact.html"
+                            class="bg-brand-600 hover:bg-brand-500 text-white px-5 py-2 rounded-full text-sm font-medium transition duration-300 transform hover:scale-105">Contact
+                            Us</a>
+                    </div>
+                </div>
+                <div class="-mr-2 flex md:hidden">
+                    <button type="button"
+                        class="bg-gray-800 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none"
+                        id="mobile-menu-btn">
+                        <span class="sr-only">Open main menu</span>
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div class="hidden md:hidden bg-gray-900 border-t border-gray-800" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html"
+                    class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                <a href="shop.html" class="text-white block px-3 py-2 rounded-md text-base font-medium">Laptops</a>
+                <a href="about.html"
+                    class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">About Us</a>
+                <a href="contact.html" class="text-brand-500 block px-3 py-2 rounded-md text-base font-medium">Contact
+                    Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <div class="bg-gray-800 py-24 md:py-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-3xl md:text-5xl font-extrabold text-white">Our Laptops</h1>
+            <p class="mt-4 text-gray-400 max-w-2xl mx-auto">Explore our range of premium laptops, from gaming beasts to
+                ultra-portable workstations.</p>
+        </div>
+    </div>
+
+    <!-- Shop Content -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="flex flex-col md:flex-row gap-8">
+            <!-- Sidebar Filters -->
+            <div class="w-full md:w-64 flex-shrink-0">
+                <div class="bg-dark-card p-6 rounded-lg sticky top-24 border border-gray-800">
+                    <h3 class="text-lg font-medium text-white mb-4">Categories</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-brand-500 font-medium hover:text-brand-400">All Laptops</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Gaming</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Ultrabooks</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Business</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Student</a></li>
+                    </ul>
+                    <div class="border-t border-gray-700 my-6"></div>
+                    <h3 class="text-lg font-medium text-white mb-4">Brands</h3>
+                    <div class="space-y-2">
+                        <label class="flex items-center space-x-3 cursor-pointer">
+                            <input type="checkbox"
+                                class="form-checkbox h-5 w-5 text-brand-600 rounded bg-gray-700 border-gray-600">
+                            <span class="text-gray-400">Asus ROG</span>
+                        </label>
+                        <label class="flex items-center space-x-3 cursor-pointer">
+                            <input type="checkbox"
+                                class="form-checkbox h-5 w-5 text-brand-600 rounded bg-gray-700 border-gray-600">
+                            <span class="text-gray-400">Apple</span>
+                        </label>
+                        <label class="flex items-center space-x-3 cursor-pointer">
+                            <input type="checkbox"
+                                class="form-checkbox h-5 w-5 text-brand-600 rounded bg-gray-700 border-gray-600">
+                            <span class="text-gray-400">Dell</span>
+                        </label>
+                        <label class="flex items-center space-x-3 cursor-pointer">
+                            <input type="checkbox"
+                                class="form-checkbox h-5 w-5 text-brand-600 rounded bg-gray-700 border-gray-600">
+                            <span class="text-gray-400">MSI</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Grid -->
+            <div class="flex-1">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Product 1 -->
+                    <div
+                        class="bg-dark-card rounded-xl overflow-hidden border border-gray-800 hover:border-brand-500 transition duration-300 shadow-lg group">
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1603302576837-37561b2e2302?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                                alt="Laptop"
+                                class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-lg font-semibold text-white">Asus ROG Strix G16</h3>
+                            <p class="text-gray-500 text-xs mb-3">Gaming</p>
+                            <div class="flex justify-between items-center mt-4">
+                                <span class="text-brand-500 font-bold">LKR 420,000</span>
+                                <button
+                                    class="bg-gray-700 hover:bg-brand-600 text-white rounded-full h-8 w-8 flex items-center justify-center transition">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product 2 -->
+                    <div
+                        class="bg-dark-card rounded-xl overflow-hidden border border-gray-800 hover:border-brand-500 transition duration-300 shadow-lg group">
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca4?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                                alt="Laptop"
+                                class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-lg font-semibold text-white">MacBook Pro 14</h3>
+                            <p class="text-gray-500 text-xs mb-3">Professional</p>
+                            <div class="flex justify-between items-center mt-4">
+                                <span class="text-brand-500 font-bold">LKR 550,000</span>
+                                <button
+                                    class="bg-gray-700 hover:bg-brand-600 text-white rounded-full h-8 w-8 flex items-center justify-center transition">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product 3 -->
+                    <div
+                        class="bg-dark-card rounded-xl overflow-hidden border border-gray-800 hover:border-brand-500 transition duration-300 shadow-lg group">
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1593640408182-31c70c8268f5?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                                alt="Laptop"
+                                class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-lg font-semibold text-white">Dell XPS 15</h3>
+                            <p class="text-gray-500 text-xs mb-3">Ultrabook</p>
+                            <div class="flex justify-between items-center mt-4">
+                                <span class="text-brand-500 font-bold">LKR 620,000</span>
+                                <button
+                                    class="bg-gray-700 hover:bg-brand-600 text-white rounded-full h-8 w-8 flex items-center justify-center transition">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product 4 -->
+                    <div
+                        class="bg-dark-card rounded-xl overflow-hidden border border-gray-800 hover:border-brand-500 transition duration-300 shadow-lg group">
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1541807084-5c52b6b3adef?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                                alt="Laptop"
+                                class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-lg font-semibold text-white">MacBook Air M1</h3>
+                            <p class="text-gray-500 text-xs mb-3">Student</p>
+                            <div class="flex justify-between items-center mt-4">
+                                <span class="text-brand-500 font-bold">LKR 260,000</span>
+                                <button
+                                    class="bg-gray-700 hover:bg-brand-600 text-white rounded-full h-8 w-8 flex items-center justify-center transition">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product 5 -->
+                    <div
+                        class="bg-dark-card rounded-xl overflow-hidden border border-gray-800 hover:border-brand-500 transition duration-300 shadow-lg group">
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                                alt="Laptop"
+                                class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-lg font-semibold text-white">MSI Raider GE76</h3>
+                            <p class="text-gray-500 text-xs mb-3">Gaming</p>
+                            <div class="flex justify-between items-center mt-4">
+                                <span class="text-brand-500 font-bold">LKR 850,000</span>
+                                <button
+                                    class="bg-gray-700 hover:bg-brand-600 text-white rounded-full h-8 w-8 flex items-center justify-center transition">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product 6 -->
+                    <div
+                        class="bg-dark-card rounded-xl overflow-hidden border border-gray-800 hover:border-brand-500 transition duration-300 shadow-lg group">
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1531297420494-856f4af421a3?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                                alt="Laptop"
+                                class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-lg font-semibold text-white">HP Spectre x360</h3>
+                            <p class="text-gray-500 text-xs mb-3">Convertible</p>
+                            <div class="flex justify-between items-center mt-4">
+                                <span class="text-brand-500 font-bold">LKR 480,000</span>
+                                <button
+                                    class="bg-gray-700 hover:bg-brand-600 text-white rounded-full h-8 w-8 flex items-center justify-center transition">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark-bg border-t border-gray-800 mt-auto pt-12 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-gray-500 text-sm">&copy; 2024 MRD Tech Shop. Detailed product inventory.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
